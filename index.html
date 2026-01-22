@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOY JOY - Discover Local Experiences</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        .logo {
+            font-size: 4em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .tagline {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        .description {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        .description p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .feature-text {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .app-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .app-button {
+            background: white;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .coming-soon {
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        footer {
+            margin-top: 40px;
+            color: white;
+            opacity: 0.8;
+        }
+        footer a {
+            color: white;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">JOY JOY</div>
+        <p class="tagline">Discover Local Experiences</p>
+
+        <div class="description">
+            <p>Connect with local guides and discover authentic trips, activities, and experiences in your city and beyond.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🗺️</div>
+                    <div class="feature-text">Local Trips</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-text">Activities</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-text">Expert Guides</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-buttons">
+            <a href="#" class="app-button">
+                <span>📱</span>
+                <span>App Store</span>
+            </a>
+            <a href="#" class="app-button">
+                <span>🤖</span>
+                <span>Google Play</span>
+            </a>
+        </div>
+
+        <p class="coming-soon">Coming soon to App Store and Google Play</p>
+
+        <footer>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <p style="margin-top: 20px;">&copy; 2026 JOY JOY. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
