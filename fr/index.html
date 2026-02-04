@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JoyJoy connects travelers with verified local guides for authentic travel experiences. Discover hidden gems, book unique tours, and travel like a local.">
-    <meta name="keywords" content="local guides, travel experiences, authentic tours, tourist guides, travel booking">
+    <meta name="description" content="JoyJoy connecte les voyageurs avec des guides locaux certifiés pour des expériences de voyage authentiques. Découvrez des trésors cachés, réservez des visites uniques et voyagez comme un local.">
+    <meta name="keywords" content="guides locaux, expériences de voyage, visites authentiques, guides touristiques, réservation voyage">
     <meta name="author" content="JoyJoy">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="JoyJoy - Discover the World with Local Experts">
-    <meta property="og:description" content="Connect with verified local guides for authentic travel experiences">
+    <meta property="og:title" content="JoyJoy - Découvrez le Monde avec des Experts Locaux">
+    <meta property="og:description" content="Connectez-vous avec des guides locaux certifiés pour des expériences de voyage authentiques">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="logo.png">
+    <meta property="og:image" content="../logo.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JoyJoy - Discover the World with Local Experts">
-    <meta name="twitter:description" content="Connect with verified local guides for authentic travel experiences">
+    <meta name="twitter:title" content="JoyJoy - Découvrez le Monde avec des Experts Locaux">
+    <meta name="twitter:description" content="Connectez-vous avec des guides locaux certifiés pour des expériences de voyage authentiques">
 
-    <title>JoyJoy - Discover the World with Local Experts</title>
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>JoyJoy - Découvrez le Monde avec des Experts Locaux</title>
+    <link rel="icon" type="image/png" href="../logo.png">
 
     <style>
         /* ===== CSS Variables ===== */
@@ -232,14 +232,23 @@
             background: var(--light-surface);
         }
 
-        .lang-select {
-            padding: 8px 12px;
+        .lang-btn {
+            background: none;
             border: 1px solid var(--text-muted);
+            padding: 8px 16px;
             border-radius: var(--radius-sm);
-            background: var(--white);
-            color: var(--text-dark);
-            font-size: 0.9rem;
             cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--secondary);
+            background: var(--light-surface);
         }
 
         .mobile-menu-btn {
@@ -360,34 +369,6 @@
 
         .lang-popup-close:hover {
             background: var(--primary-dark);
-        }
-
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--text-muted);
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all var(--transition);
-        }
-
-        .lang-btn:hover {
-            border-color: var(--secondary);
-            background: var(--light-surface);
-        }
-
-        /* ===== App Highlight ===== */
-        .app-highlight {
-            background: rgba(255,255,255,0.1);
-            padding: 12px 20px;
-            border-radius: var(--radius-md);
-            margin-top: 16px;
-            font-size: 0.95rem;
         }
 
         /* ===== Hero Section ===== */
@@ -685,6 +666,14 @@
         .guides-cta p {
             opacity: 0.9;
             margin-bottom: 24px;
+        }
+
+        .app-highlight {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            margin-top: 16px;
+            font-size: 0.95rem;
         }
 
         /* ===== For Travelers Section ===== */
@@ -1354,68 +1343,34 @@
                 justify-content: center;
             }
         }
-
-        /* ===== RTL Support ===== */
-        [dir="rtl"] {
-            direction: rtl;
-        }
-
-        [dir="rtl"] .benefit-item {
-            flex-direction: row-reverse;
-        }
-
-        [dir="rtl"] .testimonial-author {
-            flex-direction: row-reverse;
-        }
-
-        [dir="rtl"] .author-info {
-            text-align: right;
-        }
-
-        /* ===== Animations ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="/" class="nav-logo" aria-label="JoyJoy Home">
-                <img src="logo.png" alt="JoyJoy Logo">
+            <a href="../" class="nav-logo" aria-label="Accueil JoyJoy">
+                <img src="../logo.png" alt="Logo JoyJoy">
             </a>
 
             <ul class="nav-links">
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#for-guides">For Guides</a></li>
-                <li><a href="#for-travelers">For Travelers</a></li>
+                <li><a href="#how-it-works">Comment ca marche</a></li>
+                <li><a href="#features">Fonctionnalites</a></li>
+                <li><a href="#for-guides">Pour les Guides</a></li>
+                <li><a href="#for-travelers">Pour les Voyageurs</a></li>
                 <li><a href="#destinations">Destinations</a></li>
             </ul>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
                     <span class="theme-icon">&#9790;</span>
                 </button>
-                <button class="lang-btn" id="langBtn" aria-label="Select language">
-                    <span id="currentLang">EN</span>
+                <button class="lang-btn" id="langBtn" aria-label="Choisir la langue">
+                    <span id="currentLang">FR</span>
                     <span>&#9662;</span>
                 </button>
-                <a href="#download" class="btn btn-primary">Get the App</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <a href="#download" class="btn btn-primary">Telecharger</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
                     &#9776;
                 </button>
             </div>
@@ -1425,12 +1380,12 @@
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
         <ul>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#for-guides">For Guides</a></li>
-            <li><a href="#for-travelers">For Travelers</a></li>
+            <li><a href="#how-it-works">Comment ca marche</a></li>
+            <li><a href="#features">Fonctionnalites</a></li>
+            <li><a href="#for-guides">Pour les Guides</a></li>
+            <li><a href="#for-travelers">Pour les Voyageurs</a></li>
             <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#download">Get the App</a></li>
+            <li><a href="#download">Telecharger</a></li>
         </ul>
     </div>
 
@@ -1439,11 +1394,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Discover the World with Local Experts</h1>
-                    <p class="hero-subtitle">Connect with verified local guides for authentic travel experiences. Go beyond tourist traps and discover hidden gems with people who know their city best.</p>
+                    <h1 class="hero-title">Decouvrez le Monde avec des Experts Locaux</h1>
+                    <p class="hero-subtitle">Connectez-vous avec des guides locaux certifies pour des experiences de voyage authentiques. Allez au-dela des pieges a touristes et decouvrez des tresors caches avec ceux qui connaissent le mieux leur ville.</p>
                     <div class="hero-buttons">
-                        <a href="#for-travelers" class="btn btn-secondary">Find a Guide</a>
-                        <a href="#for-guides" class="btn btn-outline">Become a Guide</a>
+                        <a href="#for-travelers" class="btn btn-secondary">Trouver un Guide</a>
+                        <a href="#for-guides" class="btn btn-outline">Devenir Guide</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -1458,30 +1413,30 @@
     <!-- How It Works Section -->
     <section class="section how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Whether you're a traveler seeking authentic experiences or a guide ready to share your expertise, getting started is simple.</p>
+            <h2 class="section-title">Comment ca Marche</h2>
+            <p class="section-subtitle">Que vous soyez un voyageur a la recherche d'experiences authentiques ou un guide pret a partager votre expertise, commencer est simple.</p>
 
             <div class="tabs">
-                <button class="tab-btn active" data-tab="travelers">For Travelers</button>
-                <button class="tab-btn" data-tab="guides">For Guides</button>
+                <button class="tab-btn active" data-tab="travelers">Pour les Voyageurs</button>
+                <button class="tab-btn" data-tab="guides">Pour les Guides</button>
             </div>
 
             <div class="tab-content active" id="travelers">
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Browse Local Guides</h3>
-                        <p>Search verified local guides by destination, language, specialty, or ratings. Find the perfect match for your travel style.</p>
+                        <h3>Parcourez les Guides Locaux</h3>
+                        <p>Recherchez des guides locaux certifies par destination, langue, specialite ou notes. Trouvez le match parfait pour votre style de voyage.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Book Your Experience</h3>
-                        <p>Choose from unique tours and experiences. Book instantly with secure payment and get confirmation in seconds.</p>
+                        <h3>Reservez Votre Experience</h3>
+                        <p>Choisissez parmi des visites et experiences uniques. Reservez instantanement avec un paiement securise et recevez une confirmation en quelques secondes.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Travel with Confidence</h3>
-                        <p>Connect with your guide, get real-time updates, and enjoy an authentic local experience. Leave a review to help fellow travelers.</p>
+                        <h3>Voyagez en Toute Confiance</h3>
+                        <p>Connectez-vous avec votre guide, recevez des mises a jour en temps reel et profitez d'une experience locale authentique. Laissez un avis pour aider les autres voyageurs.</p>
                     </div>
                 </div>
             </div>
@@ -1490,18 +1445,18 @@
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Create Your Profile</h3>
-                        <p>Sign up for free and build your professional profile. Showcase your experience, languages, and specialties.</p>
+                        <h3>Creez Votre Profil</h3>
+                        <p>Inscrivez-vous gratuitement et construisez votre profil professionnel. Mettez en valeur votre experience, vos langues et vos specialites.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>List Your Experiences</h3>
-                        <p>Create unique tours and activities. Set your own prices, availability, and let travelers discover your offerings.</p>
+                        <h3>Listez Vos Experiences</h3>
+                        <p>Creez des visites et activites uniques. Fixez vos propres prix, disponibilites et laissez les voyageurs decouvrir vos offres.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Start Earning</h3>
-                        <p>Accept bookings, connect with travelers, and get paid securely. Build your reputation with reviews and grow your business.</p>
+                        <h3>Commencez a Gagner</h3>
+                        <p>Acceptez les reservations, connectez-vous avec les voyageurs et soyez paye en toute securite. Construisez votre reputation avec des avis et developpez votre activite.</p>
                     </div>
                 </div>
             </div>
@@ -1511,49 +1466,49 @@
     <!-- Features Section -->
     <section class="section features" id="features">
         <div class="container">
-            <h2 class="section-title">Why Choose JoyJoy</h2>
-            <p class="section-subtitle">Everything you need for authentic travel experiences, all in one platform.</p>
+            <h2 class="section-title">Pourquoi Choisir JoyJoy</h2>
+            <p class="section-subtitle">Tout ce dont vous avez besoin pour des experiences de voyage authentiques, sur une seule plateforme.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">&#128272;</div>
-                    <h3>Verified Guides</h3>
-                    <p>All guides are vetted and verified for your safety and peace of mind.</p>
+                    <h3>Guides Certifies</h3>
+                    <p>Tous les guides sont verifies et certifies pour votre securite et tranquillite d'esprit.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#128179;</div>
-                    <h3>Secure Payments</h3>
-                    <p>Protected transactions with escrow until your trip is complete.</p>
+                    <h3>Paiements Securises</h3>
+                    <p>Transactions protegees avec sequestre jusqu'a la fin de votre voyage.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#128172;</div>
-                    <h3>Direct Chat</h3>
-                    <p>Message your guide before, during, and after your experience.</p>
+                    <h3>Chat Direct</h3>
+                    <p>Envoyez des messages a votre guide avant, pendant et apres votre experience.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#11088;</div>
-                    <h3>Trusted Reviews</h3>
-                    <p>Read verified reviews from real travelers to make informed decisions.</p>
+                    <h3>Avis de Confiance</h3>
+                    <p>Lisez des avis verifies de vrais voyageurs pour prendre des decisions eclairees.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#127760;</div>
-                    <h3>Multi-Language</h3>
-                    <p>Find guides who speak your language for seamless communication.</p>
+                    <h3>Multi-Langues</h3>
+                    <p>Trouvez des guides qui parlent votre langue pour une communication fluide.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#128205;</div>
-                    <h3>Discover Spots</h3>
-                    <p>Find trending locations and hidden gems through social media insights.</p>
+                    <h3>Decouvrez des Lieux</h3>
+                    <p>Trouvez des lieux tendance et des tresors caches grace aux reseaux sociaux.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#128197;</div>
-                    <h3>Easy Booking</h3>
-                    <p>Book experiences instantly and manage everything in one place.</p>
+                    <h3>Reservation Facile</h3>
+                    <p>Reservez des experiences instantanement et gerez tout en un seul endroit.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">&#128241;</div>
                     <h3>Mobile First</h3>
-                    <p>Manage everything on the go with our iOS and Android apps.</p>
+                    <p>Gerez tout en deplacement avec nos applications iOS et Android.</p>
                 </div>
             </div>
         </div>
@@ -1562,54 +1517,54 @@
     <!-- For Guides Section -->
     <section class="section for-guides" id="for-guides">
         <div class="container">
-            <h2 class="section-title">Grow Your Guiding Business</h2>
-            <p class="section-subtitle">Join thousands of guides already earning with JoyJoy. Everything you need to build and scale your tourism business.</p>
+            <h2 class="section-title">Developpez Votre Activite de Guide</h2>
+            <p class="section-subtitle">Rejoignez des milliers de guides qui gagnent deja avec JoyJoy. Tout ce dont vous avez besoin pour creer et developper votre activite touristique.</p>
 
             <div class="benefits-grid">
                 <div class="benefits-list">
                     <div class="benefit-item">
                         <div class="benefit-icon">&#128176;</div>
                         <div class="benefit-text">
-                            <h4>Zero Upfront Costs</h4>
-                            <p>Start earning without subscription fees. Only pay when you get paid.</p>
+                            <h4>Zero Frais Initiaux</h4>
+                            <p>Commencez a gagner sans frais d'abonnement. Payez uniquement quand vous etes paye.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">&#127758;</div>
                         <div class="benefit-text">
-                            <h4>Global Reach</h4>
-                            <p>Access travelers from around the world looking for authentic experiences.</p>
+                            <h4>Portee Mondiale</h4>
+                            <p>Accedez a des voyageurs du monde entier a la recherche d'experiences authentiques.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">&#128101;</div>
                         <div class="benefit-text">
-                            <h4>Team Management</h4>
-                            <p>Build your agency with team invitations, roles, and revenue sharing.</p>
+                            <h4>Gestion d'Equipe</h4>
+                            <p>Construisez votre agence avec des invitations d'equipe, des roles et un partage des revenus.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">&#128200;</div>
                         <div class="benefit-text">
-                            <h4>Analytics Dashboard</h4>
-                            <p>Track performance, bookings, and earnings with detailed insights.</p>
+                            <h4>Tableau de Bord Analytique</h4>
+                            <p>Suivez les performances, les reservations et les revenus avec des analyses detaillees.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">&#128274;</div>
                         <div class="benefit-text">
-                            <h4>Secure Payments</h4>
-                            <p>Get paid reliably via Stripe with automatic payouts to your bank.</p>
+                            <h4>Paiements Securises</h4>
+                            <p>Soyez paye de maniere fiable via Stripe avec des virements automatiques sur votre compte.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="guides-cta">
-                    <h3>Ready to Start Earning?</h3>
-                    <p>Join 1,000+ guides already building their business on JoyJoy. Create your profile in minutes and start receiving bookings.</p>
-                    <a href="#download" class="btn btn-secondary">Become a Guide</a>
+                    <h3>Pret a Commencer a Gagner ?</h3>
+                    <p>Rejoignez plus de 1 000 guides qui developpent deja leur activite sur JoyJoy. Creez votre profil en quelques minutes et commencez a recevoir des reservations.</p>
+                    <a href="#download" class="btn btn-secondary">Devenir Guide</a>
                     <div class="app-highlight">
-                        &#128241; Download the <strong>JoyJoy Guide</strong> app for guides
+                        &#128241; Telechargez l'application <strong>JoyJoy Guide</strong> pour les guides
                     </div>
                 </div>
             </div>
@@ -1619,38 +1574,38 @@
     <!-- For Travelers Section -->
     <section class="section for-travelers" id="for-travelers">
         <div class="container">
-            <h2 class="section-title">Discover Authentic Experiences</h2>
-            <p class="section-subtitle">Travel like a local with verified guides who share your interests and passion for exploration.</p>
+            <h2 class="section-title">Decouvrez des Experiences Authentiques</h2>
+            <p class="section-subtitle">Voyagez comme un local avec des guides certifies qui partagent vos interets et votre passion pour l'exploration.</p>
 
             <div class="traveler-features">
                 <div class="traveler-card">
                     <div class="traveler-card-icon">&#128270;</div>
-                    <h3>Find Your Perfect Guide</h3>
-                    <p>Search by destination, language, price, and interests to find guides that match your travel style.</p>
+                    <h3>Trouvez Votre Guide Ideal</h3>
+                    <p>Recherchez par destination, langue, prix et interets pour trouver des guides qui correspondent a votre style de voyage.</p>
                     <ul>
-                        <li>Filter by ratings and reviews</li>
-                        <li>Browse detailed profiles</li>
-                        <li>Preview trip itineraries</li>
+                        <li>Filtrez par notes et avis</li>
+                        <li>Parcourez les profils detailles</li>
+                        <li>Previsualisez les itineraires</li>
                     </ul>
                 </div>
                 <div class="traveler-card">
                     <div class="traveler-card-icon">&#128179;</div>
-                    <h3>Book with Confidence</h3>
-                    <p>Secure payments, clear cancellation policies, and instant booking confirmation.</p>
+                    <h3>Reservez en Confiance</h3>
+                    <p>Paiements securises, politiques d'annulation claires et confirmation de reservation instantanee.</p>
                     <ul>
-                        <li>Protected payments via Stripe</li>
-                        <li>Transparent pricing</li>
-                        <li>Flexible cancellation</li>
+                        <li>Paiements proteges via Stripe</li>
+                        <li>Tarification transparente</li>
+                        <li>Annulation flexible</li>
                     </ul>
                 </div>
                 <div class="traveler-card">
                     <div class="traveler-card-icon">&#127919;</div>
-                    <h3>Experience the Local Way</h3>
-                    <p>Go beyond tourist traps with insider knowledge and personalized experiences.</p>
+                    <h3>Vivez a la Locale</h3>
+                    <p>Allez au-dela des pieges a touristes avec des connaissances d'inities et des experiences personnalisees.</p>
                     <ul>
-                        <li>Hidden gems and local spots</li>
-                        <li>Real-time communication</li>
-                        <li>Share reviews to help others</li>
+                        <li>Tresors caches et spots locaux</li>
+                        <li>Communication en temps reel</li>
+                        <li>Partagez des avis pour aider les autres</li>
                     </ul>
                 </div>
             </div>
@@ -1660,29 +1615,29 @@
     <!-- Trust & Safety Section -->
     <section class="section trust-section" id="trust">
         <div class="container">
-            <h2 class="section-title">Trust & Safety</h2>
-            <p class="section-subtitle">Your safety and security are our top priorities. Here's how we protect you.</p>
+            <h2 class="section-title">Confiance et Securite</h2>
+            <p class="section-subtitle">Votre securite est notre priorite absolue. Voici comment nous vous protegeons.</p>
 
             <div class="trust-grid">
                 <div class="trust-card">
                     <div class="trust-icon">&#128100;</div>
-                    <h3>Verified Guides</h3>
-                    <p>All guides go through our verification process including ID checks and profile review.</p>
+                    <h3>Guides Certifies</h3>
+                    <p>Tous les guides passent par notre processus de verification incluant des controles d'identite et une revision de profil.</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">&#128179;</div>
-                    <h3>Payment Protection</h3>
-                    <p>Funds are held securely in escrow and only released after trip completion.</p>
+                    <h3>Protection des Paiements</h3>
+                    <p>Les fonds sont conserves en securite sous sequestre et liberes uniquement apres la fin du voyage.</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">&#128274;</div>
-                    <h3>Data Security</h3>
-                    <p>Industry-standard encryption and GDPR-compliant data protection.</p>
+                    <h3>Securite des Donnees</h3>
+                    <p>Chiffrement aux normes de l'industrie et protection des donnees conforme au RGPD.</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">&#128222;</div>
-                    <h3>24/7 Support</h3>
-                    <p>Our support team is always here to help with any issues or concerns.</p>
+                    <h3>Support 24/7</h3>
+                    <p>Notre equipe de support est toujours la pour vous aider en cas de probleme ou de question.</p>
                 </div>
             </div>
         </div>
@@ -1691,21 +1646,21 @@
     <!-- Destinations Section -->
     <section class="section destinations" id="destinations">
         <div class="container">
-            <h2 class="section-title">Explore Categories</h2>
-            <p class="section-subtitle">From cultural tours to adventure activities, find experiences that match your interests.</p>
+            <h2 class="section-title">Explorez les Categories</h2>
+            <p class="section-subtitle">Des visites culturelles aux activites d'aventure, trouvez des experiences qui correspondent a vos interets.</p>
 
             <div class="categories-grid">
                 <div class="category-card">
                     <div class="category-icon">&#127961;</div>
-                    <span>Cultural</span>
+                    <span>Culturel</span>
                 </div>
                 <div class="category-card">
                     <div class="category-icon">&#9968;</div>
-                    <span>Adventure</span>
+                    <span>Aventure</span>
                 </div>
                 <div class="category-card">
                     <div class="category-icon">&#127860;</div>
-                    <span>Food & Wine</span>
+                    <span>Gastronomie</span>
                 </div>
                 <div class="category-card">
                     <div class="category-icon">&#127795;</div>
@@ -1713,36 +1668,36 @@
                 </div>
                 <div class="category-card">
                     <div class="category-icon">&#128247;</div>
-                    <span>Photography</span>
+                    <span>Photographie</span>
                 </div>
                 <div class="category-card">
                     <div class="category-icon">&#127939;</div>
-                    <span>Active</span>
+                    <span>Actif</span>
                 </div>
             </div>
 
             <div class="destinations-showcase">
                 <div class="destination-card">
                     <div class="destination-overlay">
-                        <h3>Morocco</h3>
+                        <h3>Maroc</h3>
                         <p>120+ experiences</p>
                     </div>
                 </div>
                 <div class="destination-card">
                     <div class="destination-overlay">
-                        <h3>Egypt</h3>
+                        <h3>Egypte</h3>
                         <p>85+ experiences</p>
                     </div>
                 </div>
                 <div class="destination-card">
                     <div class="destination-overlay">
-                        <h3>Tunisia</h3>
+                        <h3>Tunisie</h3>
                         <p>60+ experiences</p>
                     </div>
                 </div>
                 <div class="destination-card">
                     <div class="destination-overlay">
-                        <h3>Jordan</h3>
+                        <h3>Jordanie</h3>
                         <p>45+ experiences</p>
                     </div>
                 </div>
@@ -1753,39 +1708,39 @@
     <!-- Testimonials Section -->
     <section class="section testimonials" id="testimonials">
         <div class="container">
-            <h2 class="section-title">What People Say</h2>
-            <p class="section-subtitle">Hear from travelers and guides who use JoyJoy.</p>
+            <h2 class="section-title">Ce que Disent les Gens</h2>
+            <p class="section-subtitle">Ecoutez les voyageurs et les guides qui utilisent JoyJoy.</p>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">JoyJoy completely changed how I travel. My guide in Marrakech took me to places I never would have found on my own. The authentic food spots alone were worth it!</p>
+                    <p class="testimonial-text">JoyJoy a completement change ma facon de voyager. Mon guide a Marrakech m'a emmene dans des endroits que je n'aurais jamais trouves seul. Les spots de cuisine authentique valaient le detour !</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">SM</div>
                         <div class="author-info">
                             <h4>Sarah M.</h4>
-                            <p>Traveler from USA</p>
+                            <p>Voyageuse des USA</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">As a local guide, JoyJoy has helped me build a sustainable business. The platform is easy to use, payments are reliable, and I love connecting with travelers from all over.</p>
+                    <p class="testimonial-text">En tant que guide local, JoyJoy m'a aide a construire une activite durable. La plateforme est facile a utiliser, les paiements sont fiables, et j'adore me connecter avec des voyageurs du monde entier.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">AK</div>
                         <div class="author-info">
                             <h4>Ahmed K.</h4>
-                            <p>Guide in Cairo</p>
+                            <p>Guide au Caire</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">The verification process gave me confidence to book. Our guide was professional, knowledgeable, and made our family trip to Tunisia unforgettable. Highly recommend!</p>
+                    <p class="testimonial-text">Le processus de verification m'a donne confiance pour reserver. Notre guide etait professionnel, competent et a rendu notre voyage en famille en Tunisie inoubliable. Je recommande vivement !</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">JL</div>
                         <div class="author-info">
                             <h4>Jean L.</h4>
-                            <p>Traveler from France</p>
+                            <p>Voyageur de France</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -1799,29 +1754,29 @@
         <div class="container">
             <div class="apps-content">
                 <div class="apps-text">
-                    <h2>Get the JoyJoy App</h2>
-                    <p>Download our app for iOS or Android and start exploring. Book experiences, chat with guides, and manage your trips all from your phone.</p>
+                    <h2>Telechargez l'App JoyJoy</h2>
+                    <p>Telechargez notre application pour iOS ou Android et commencez a explorer. Reservez des experiences, chattez avec des guides et gerez vos voyages depuis votre telephone.</p>
 
                     <ul class="app-features">
-                        <li>Browse and book experiences instantly</li>
-                        <li>Chat directly with your guides</li>
-                        <li>Offline access to your trip details</li>
-                        <li>Real-time notifications</li>
-                        <li>Save favorites for future trips</li>
+                        <li>Parcourez et reservez des experiences instantanement</li>
+                        <li>Chattez directement avec vos guides</li>
+                        <li>Acces hors ligne a vos details de voyage</li>
+                        <li>Notifications en temps reel</li>
+                        <li>Sauvegardez vos favoris pour de futurs voyages</li>
                     </ul>
 
                     <div class="store-buttons">
-                        <a href="#" class="store-btn" aria-label="Download on App Store">
+                        <a href="#" class="store-btn" aria-label="Telecharger sur l'App Store">
                             <span class="store-btn-icon">&#63743;</span>
                             <div class="store-btn-text">
-                                <small>Download on the</small>
+                                <small>Telecharger sur</small>
                                 <span>App Store</span>
                             </div>
                         </a>
-                        <a href="#" class="store-btn" aria-label="Get it on Google Play">
+                        <a href="#" class="store-btn" aria-label="Disponible sur Google Play">
                             <span class="store-btn-icon">&#9654;</span>
                             <div class="store-btn-text">
-                                <small>Get it on</small>
+                                <small>Disponible sur</small>
                                 <span>Google Play</span>
                             </div>
                         </a>
@@ -1831,7 +1786,7 @@
                 <div class="apps-visual">
                     <div class="phone-mockup">
                         <div class="phone-screen">
-                            <img src="logo.png" alt="JoyJoy App">
+                            <img src="../logo.png" alt="Application JoyJoy">
                         </div>
                     </div>
                 </div>
@@ -1842,26 +1797,26 @@
     <!-- Language Popup -->
     <div class="lang-popup-overlay" id="langPopup">
         <div class="lang-popup">
-            <h3>Choose Your Language</h3>
-            <p>Select your preferred language</p>
+            <h3>Choisissez Votre Langue</h3>
+            <p>Selectionnez votre langue preferee</p>
             <div class="lang-options">
-                <div class="lang-option" data-lang="en" data-url="index.html">
+                <div class="lang-option" data-lang="en" data-url="../index.html">
                     <span class="lang-flag">&#127468;&#127463;</span>
-                    <span class="lang-name">English</span>
+                    <span class="lang-name">Anglais</span>
                     <span class="lang-native">English</span>
                 </div>
-                <div class="lang-option" data-lang="fr" data-url="fr/index.html">
+                <div class="lang-option selected" data-lang="fr" data-url="index.html">
                     <span class="lang-flag">&#127467;&#127479;</span>
-                    <span class="lang-name">French</span>
+                    <span class="lang-name">Francais</span>
                     <span class="lang-native">Francais</span>
                 </div>
-                <div class="lang-option" data-lang="ar" data-url="ar/index.html">
+                <div class="lang-option" data-lang="ar" data-url="../ar/index.html">
                     <span class="lang-flag">&#127462;&#127466;</span>
-                    <span class="lang-name">Arabic</span>
+                    <span class="lang-name">Arabe</span>
                     <span class="lang-native">العربية</span>
                 </div>
             </div>
-            <button class="lang-popup-close" id="langPopupClose">Confirm</button>
+            <button class="lang-popup-close" id="langPopupClose">Confirmer</button>
         </div>
     </div>
 
@@ -1870,8 +1825,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="logo.png" alt="JoyJoy">
-                    <p>Connecting travelers with local experts for authentic experiences. Discover the world through the eyes of those who know it best.</p>
+                    <img src="../logo.png" alt="JoyJoy">
+                    <p>Connecter les voyageurs avec des experts locaux pour des experiences authentiques. Decouvrez le monde a travers les yeux de ceux qui le connaissent le mieux.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">f</a>
                         <a href="#" class="social-link" aria-label="Instagram">&#128247;</a>
@@ -1881,31 +1836,31 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>For Travelers</h4>
+                    <h4>Pour les Voyageurs</h4>
                     <ul>
-                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#how-it-works">Comment ca Marche</a></li>
                         <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#trust">Trust & Safety</a></li>
+                        <li><a href="#features">Fonctionnalites</a></li>
+                        <li><a href="#trust">Confiance et Securite</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>For Guides</h4>
+                    <h4>Pour les Guides</h4>
                     <ul>
-                        <li><a href="#for-guides">Become a Guide</a></li>
-                        <li><a href="#">Guide Resources</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                        <li><a href="#">Community</a></li>
+                        <li><a href="#for-guides">Devenir Guide</a></li>
+                        <li><a href="#">Ressources Guide</a></li>
+                        <li><a href="#">Histoires de Succes</a></li>
+                        <li><a href="#">Communaute</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Company</h4>
+                    <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
+                        <li><a href="#">A Propos</a></li>
+                        <li><a href="#">Carrieres</a></li>
+                        <li><a href="#">Presse</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -1913,20 +1868,20 @@
                 <div class="footer-column">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Safety Center</a></li>
-                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Centre d'Aide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre de Securite</a></li>
+                        <li><a href="#">Accessibilite</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 JoyJoy. All rights reserved.</p>
+                <p>&copy; 2026 JoyJoy. Tous droits reserves.</p>
                 <div class="footer-legal">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+                    <a href="../privacy">Politique de Confidentialite</a>
+                    <a href="../terms">Conditions d'Utilisation</a>
+                    <a href="#">Politique des Cookies</a>
                 </div>
             </div>
         </div>
@@ -1937,7 +1892,6 @@
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = themeToggle.querySelector('.theme-icon');
 
-        // Check for saved theme preference or default to light
         const savedTheme = localStorage.getItem('theme') ||
             (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -1964,7 +1918,6 @@
             mobileMenuBtn.innerHTML = mobileNav.classList.contains('active') ? '&#10005;' : '&#9776;';
         });
 
-        // Close mobile menu when clicking a link
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
@@ -1979,10 +1932,8 @@
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const tabId = btn.getAttribute('data-tab');
-
                 tabBtns.forEach(b => b.classList.remove('active'));
                 tabContents.forEach(c => c.classList.remove('active'));
-
                 btn.classList.add('active');
                 document.getElementById(tabId).classList.add('active');
             });
@@ -1994,26 +1945,14 @@
         const langPopupClose = document.getElementById('langPopupClose');
         const langOptions = document.querySelectorAll('.lang-option');
         const currentLangSpan = document.getElementById('currentLang');
-        let selectedLang = localStorage.getItem('preferredLanguage') || 'en';
+        let selectedLang = 'fr';
 
-        // Update current language display
-        function updateLangDisplay() {
-            const langNames = { en: 'EN', fr: 'FR', ar: 'AR' };
-            currentLangSpan.textContent = langNames[selectedLang] || 'EN';
-        }
-        updateLangDisplay();
-
-        // Show popup on first visit or when clicking language button
-        const hasVisited = localStorage.getItem('hasVisited');
-        if (!hasVisited) {
-            setTimeout(() => {
-                langPopup.classList.add('active');
-            }, 1000);
-        }
+        // Save current language preference
+        localStorage.setItem('preferredLanguage', 'fr');
+        localStorage.setItem('hasVisited', 'true');
 
         langBtn.addEventListener('click', () => {
             langPopup.classList.add('active');
-            // Highlight current selection
             langOptions.forEach(opt => {
                 opt.classList.toggle('selected', opt.dataset.lang === selectedLang);
             });
@@ -2029,25 +1968,21 @@
 
         langPopupClose.addEventListener('click', () => {
             localStorage.setItem('preferredLanguage', selectedLang);
-            localStorage.setItem('hasVisited', 'true');
             langPopup.classList.remove('active');
-            updateLangDisplay();
 
-            // Redirect to selected language
             const selectedOption = document.querySelector(`.lang-option[data-lang="${selectedLang}"]`);
-            if (selectedOption && selectedLang !== 'en') {
+            if (selectedOption && selectedLang !== 'fr') {
                 window.location.href = selectedOption.dataset.url;
             }
         });
 
-        // Close popup when clicking outside
         langPopup.addEventListener('click', (e) => {
             if (e.target === langPopup) {
                 langPopup.classList.remove('active');
             }
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -2055,22 +1990,15 @@
                 if (target) {
                     const navHeight = document.querySelector('.nav').offsetHeight;
                     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                 }
             });
         });
 
-        // Nav background on scroll
+        // Nav shadow on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = 'var(--shadow-md)';
-            } else {
-                nav.style.boxShadow = 'var(--shadow-sm)';
-            }
+            nav.style.boxShadow = window.scrollY > 50 ? 'var(--shadow-md)' : 'var(--shadow-sm)';
         });
     </script>
 </body>
