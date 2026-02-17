@@ -3,55 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JoyJoy connects travelers with verified local guides for authentic travel experiences. Discover hidden gems, book unique tours, and travel like a local.">
-    <meta name="keywords" content="local guides, travel experiences, authentic tours, tourist guides, travel booking">
+    <meta name="description" content="JoyJoy - Plan your perfect journey with AI. Book trips, activities, and events worldwide with trusted local agents. Available on iOS and Android.">
+    <meta name="keywords" content="travel app, AI trip planner, travel activities, events, trusted agents, journey planner, travel booking">
     <meta name="author" content="JoyJoy">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="JoyJoy - Discover the World with Local Experts">
-    <meta property="og:description" content="Connect with verified local guides for authentic travel experiences">
+    <meta property="og:title" content="JoyJoy - Plan Your Perfect Journey with AI">
+    <meta property="og:description" content="Book trips, activities, and events worldwide with trusted local agents. Let AI build your dream journey.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="logo.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JoyJoy - Discover the World with Local Experts">
-    <meta name="twitter:description" content="Connect with verified local guides for authentic travel experiences">
+    <meta name="twitter:title" content="JoyJoy - Plan Your Perfect Journey with AI">
+    <meta name="twitter:description" content="Book trips, activities, and events worldwide with trusted local agents. Let AI build your dream journey.">
 
-    <title>JoyJoy - Discover the World with Local Experts</title>
+    <title>JoyJoy - Plan Your Perfect Journey with AI</title>
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* ===== CSS Variables ===== */
+        /* ===== CSS Variables (Dark Mode Only) ===== */
         :root {
-            --primary: #224239;
-            --primary-dark: #1a332c;
-            --secondary: #8A9A5B;
-            --secondary-light: #a3b474;
-            --white: #FFFFFF;
-            --light-surface: #F5F7F5;
-            --text-dark: #1a1a1a;
-            --text-muted: #666666;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
-            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --transition: 0.3s ease;
-        }
-
-        /* Dark Mode Variables */
-        [data-theme="dark"] {
-            --primary: #8A9A5B;
-            --primary-dark: #224239;
-            --white: #1A1A1A;
-            --light-surface: #2D2D2D;
-            --text-dark: #FFFFFF;
-            --text-muted: #a0a0a0;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-            --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
+            --primary: #6366F1;
+            --primary-dark: #0F172A;
+            --secondary: #6366F1;
+            --secondary-light: #818CF8;
+            --accent: #06B6D4;
+            --accent-light: #22D3EE;
+            --warm: #F59E0B;
+            --emerald: #10B981;
+            --violet: #8B5CF6;
+            --rose: #F43F5E;
+            --white: #0F172A;
+            --light-surface: #1E293B;
+            --text-dark: #F1F5F9;
+            --text-muted: #94A3B8;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+            --shadow-md: 0 8px 30px rgba(0,0,0,0.5);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* ===== Base Styles ===== */
@@ -94,26 +87,24 @@
         }
 
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            color: var(--primary);
+            font-size: 2.8rem;
+            color: var(--text-dark);
             text-align: center;
             margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
-        [data-theme="dark"] .section-title {
-            color: var(--secondary);
-        }
 
         .section-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             text-align: center;
             max-width: 600px;
-            margin: 0 auto 48px;
+            margin: 0 auto 56px;
         }
 
         /* ===== Buttons ===== */
@@ -122,45 +113,48 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 14px 28px;
+            padding: 14px 32px;
             border-radius: var(--radius-md);
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
             transition: all var(--transition);
             border: none;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+            color: #FFFFFF;
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 8px 25px rgba(99,102,241,0.4);
         }
 
         .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--white);
+            background: linear-gradient(135deg, #6366F1, #06B6D4);
+            color: #FFFFFF;
         }
 
         .btn-secondary:hover {
-            background-color: var(--secondary-light);
+            background: linear-gradient(135deg, #818CF8, #22D3EE);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99,102,241,0.35);
         }
 
         .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
+            background-color: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.4);
+            color: #FFFFFF;
+            backdrop-filter: blur(4px);
         }
 
         .btn-outline:hover {
-            background-color: var(--white);
-            color: var(--primary);
+            background-color: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.7);
         }
 
         /* ===== Navigation ===== */
@@ -206,40 +200,33 @@
             color: var(--text-dark);
             font-weight: 500;
             transition: color var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6366F1, #06B6D4);
+            transition: width var(--transition);
+            border-radius: 1px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
-            color: var(--secondary);
+            color: #6366F1;
         }
 
         .nav-actions {
             display: flex;
             align-items: center;
             gap: 16px;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.25rem;
-            padding: 8px;
-            border-radius: var(--radius-sm);
-            transition: background var(--transition);
-        }
-
-        .theme-toggle:hover {
-            background: var(--light-surface);
-        }
-
-        .lang-select {
-            padding: 8px 12px;
-            border: 1px solid var(--text-muted);
-            border-radius: var(--radius-sm);
-            background: var(--white);
-            color: var(--text-dark);
-            font-size: 0.9rem;
-            cursor: pointer;
         }
 
         .mobile-menu-btn {
@@ -258,7 +245,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(15,23,42,0.6);
+            backdrop-filter: blur(8px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -280,22 +268,19 @@
             max-width: 400px;
             width: 90%;
             text-align: center;
-            transform: scale(0.9);
+            transform: scale(0.9) translateY(20px);
             transition: transform var(--transition);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
         }
 
         .lang-popup-overlay.active .lang-popup {
-            transform: scale(1);
+            transform: scale(1) translateY(0);
         }
 
         .lang-popup h3 {
-            color: var(--primary);
+            color: var(--text-dark);
             margin-bottom: 8px;
             font-size: 1.5rem;
-        }
-
-        [data-theme="dark"] .lang-popup h3 {
-            color: var(--secondary);
         }
 
         .lang-popup p {
@@ -322,13 +307,13 @@
         }
 
         .lang-option:hover {
-            border-color: var(--secondary);
+            border-color: #6366F1;
             background: var(--light-surface);
         }
 
         .lang-option.selected {
-            border-color: var(--primary);
-            background: var(--light-surface);
+            border-color: #6366F1;
+            background: rgba(99,102,241,0.05);
         }
 
         .lang-flag {
@@ -349,7 +334,7 @@
         .lang-popup-close {
             margin-top: 20px;
             padding: 12px 32px;
-            background: var(--primary);
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
             color: white;
             border: none;
             border-radius: var(--radius-md);
@@ -359,7 +344,8 @@
         }
 
         .lang-popup-close:hover {
-            background: var(--primary-dark);
+            box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+            transform: translateY(-1px);
         }
 
         .lang-btn {
@@ -377,22 +363,13 @@
         }
 
         .lang-btn:hover {
-            border-color: var(--secondary);
+            border-color: #6366F1;
             background: var(--light-surface);
-        }
-
-        /* ===== App Highlight ===== */
-        .app-highlight {
-            background: rgba(255,255,255,0.1);
-            padding: 12px 20px;
-            border-radius: var(--radius-md);
-            margin-top: 16px;
-            font-size: 0.95rem;
         }
 
         /* ===== Hero Section ===== */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #2d5a4d 100%);
+            background: #0F172A;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -401,6 +378,60 @@
             overflow: hidden;
         }
 
+        /* Mesh gradient blobs */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero-blob-1 {
+            width: 600px;
+            height: 600px;
+            background: #6366F1;
+            top: -20%;
+            right: -10%;
+            animation: blobFloat1 20s ease-in-out infinite;
+        }
+
+        .hero-blob-2 {
+            width: 500px;
+            height: 500px;
+            background: #06B6D4;
+            bottom: -25%;
+            left: -10%;
+            animation: blobFloat2 25s ease-in-out infinite;
+        }
+
+        .hero-blob-3 {
+            width: 300px;
+            height: 300px;
+            background: #8B5CF6;
+            top: 40%;
+            left: 40%;
+            animation: blobFloat3 18s ease-in-out infinite;
+        }
+
+        @keyframes blobFloat1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-40px, 30px) scale(1.1); }
+            66% { transform: translate(20px, -20px) scale(0.9); }
+        }
+
+        @keyframes blobFloat2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        @keyframes blobFloat3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.15); }
+        }
+
+        /* Grid pattern overlay */
         .hero::before {
             content: '';
             position: absolute;
@@ -408,14 +439,151 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
-            background-size: 100px;
-            opacity: 0.5;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+
+        /* Floating particles */
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+
+        .particle:nth-child(1) { top: 15%; left: 10%; animation: particleFloat 12s ease-in-out infinite; }
+        .particle:nth-child(2) { top: 30%; left: 85%; animation: particleFloat 15s ease-in-out infinite 2s; width: 3px; height: 3px; }
+        .particle:nth-child(3) { top: 70%; left: 20%; animation: particleFloat 18s ease-in-out infinite 4s; width: 5px; height: 5px; }
+        .particle:nth-child(4) { top: 80%; left: 70%; animation: particleFloat 14s ease-in-out infinite 1s; width: 3px; height: 3px; }
+        .particle:nth-child(5) { top: 50%; left: 50%; animation: particleFloat 20s ease-in-out infinite 3s; }
+        .particle:nth-child(6) { top: 25%; left: 60%; animation: particleFloat 16s ease-in-out infinite 5s; width: 6px; height: 6px; opacity: 0.2; }
+        .particle:nth-child(7) { top: 60%; left: 40%; animation: particleFloat 13s ease-in-out infinite 7s; width: 2px; height: 2px; }
+        .particle:nth-child(8) { top: 45%; left: 15%; animation: particleFloat 17s ease-in-out infinite 6s; }
+        .particle:nth-child(9) { top: 90%; left: 90%; animation: particleFloat 11s ease-in-out infinite 8s; width: 5px; height: 5px; opacity: 0.15; }
+        .particle:nth-child(10) { top: 10%; left: 45%; animation: particleFloat 19s ease-in-out infinite 9s; width: 3px; height: 3px; }
+
+        @keyframes particleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            25% { transform: translate(30px, -40px) scale(1.5); opacity: 0.6; }
+            50% { transform: translate(-20px, 20px) scale(0.8); opacity: 0.2; }
+            75% { transform: translate(40px, 30px) scale(1.2); opacity: 0.5; }
+        }
+
+        /* Flying planes */
+        .hero-routes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .route-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-plane {
+            position: absolute;
+            color: rgba(255,255,255,0.12);
+        }
+
+        .hero-plane:nth-child(1) {
+            font-size: 1.8rem;
+            animation: fly1 18s linear infinite;
+        }
+
+        .hero-plane:nth-child(2) {
+            font-size: 1.2rem;
+            animation: fly2 24s linear infinite 5s;
+        }
+
+        .hero-plane:nth-child(3) {
+            font-size: 0.9rem;
+            animation: fly3 20s linear infinite 10s;
+        }
+
+        @keyframes fly1 {
+            0% { left: -5%; top: 75%; opacity: 0; transform: rotate(-35deg); }
+            5% { opacity: 0.12; }
+            95% { opacity: 0.12; }
+            100% { left: 105%; top: 15%; opacity: 0; transform: rotate(-35deg); }
+        }
+
+        @keyframes fly2 {
+            0% { left: -5%; top: 55%; opacity: 0; transform: rotate(-25deg); }
+            5% { opacity: 0.08; }
+            95% { opacity: 0.08; }
+            100% { left: 105%; top: 25%; opacity: 0; transform: rotate(-25deg); }
+        }
+
+        @keyframes fly3 {
+            0% { left: 105%; top: 65%; opacity: 0; transform: rotate(210deg); }
+            5% { opacity: 0.06; }
+            95% { opacity: 0.06; }
+            100% { left: -5%; top: 20%; opacity: 0; transform: rotate(210deg); }
+        }
+
+        /* Glowing dots */
+        .hero-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(99,102,241,0.6);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-dot::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 50%;
+            animation: ripple 3s ease-in-out infinite;
+        }
+
+        .hero-dot:nth-child(1) { animation: blink 4s ease-in-out infinite; }
+        .hero-dot:nth-child(2) { animation: blink 4s ease-in-out infinite 1s; background: rgba(6,182,212,0.6); }
+        .hero-dot:nth-child(2)::after { border-color: rgba(6,182,212,0.3); }
+        .hero-dot:nth-child(3) { animation: blink 4s ease-in-out infinite 2s; background: rgba(139,92,246,0.6); }
+        .hero-dot:nth-child(3)::after { border-color: rgba(139,92,246,0.3); }
+        .hero-dot:nth-child(4) { animation: blink 4s ease-in-out infinite 3s; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.3); }
+        }
+
+        @keyframes ripple {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(2.5); opacity: 0; }
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -423,64 +591,185 @@
         }
 
         .hero-text {
-            color: var(--white);
+            color: #FFFFFF;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #818CF8;
+            margin-bottom: 24px;
+            backdrop-filter: blur(4px);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             margin-bottom: 24px;
             color: #FFFFFF;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #818CF8, #22D3EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 32px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            margin-bottom: 40px;
             line-height: 1.7;
-            color: #FFFFFF;
+            color: #CBD5E1;
+            animation: fadeInUp 0.8s ease 0.4s both;
         }
 
         .hero-buttons {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-image {
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: fadeInUp 1s ease 0.5s both;
         }
 
         .hero-visual {
             width: 100%;
-            max-width: 500px;
+            max-width: 420px;
             aspect-ratio: 1;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
-        .hero-visual::before {
-            content: '';
+        /* Orbiting rings */
+        .orbit-ring {
             position: absolute;
-            width: 80%;
-            height: 80%;
-            border: 2px dashed rgba(255,255,255,0.2);
             border-radius: 50%;
-            animation: rotate 30s linear infinite;
+            border: 1px solid rgba(255,255,255,0.06);
         }
 
-        @keyframes rotate {
+        .orbit-ring-1 {
+            width: 100%;
+            height: 100%;
+            animation: orbitSpin 30s linear infinite;
+        }
+
+        .orbit-ring-2 {
+            width: 75%;
+            height: 75%;
+            border-color: rgba(99,102,241,0.15);
+            border-style: dashed;
+            animation: orbitSpin 25s linear infinite reverse;
+        }
+
+        .orbit-ring-3 {
+            width: 50%;
+            height: 50%;
+            border-color: rgba(6,182,212,0.12);
+            animation: orbitSpin 20s linear infinite;
+        }
+
+        @keyframes orbitSpin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
-        .hero-icon {
-            font-size: 8rem;
+        /* Orbit dots */
+        .orbit-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .orbit-dot-1 {
+            color: #6366F1;
+            background: #6366F1;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: orbitDotPulse 3s ease-in-out infinite;
+        }
+
+        .orbit-dot-2 {
+            color: #06B6D4;
+            background: #06B6D4;
+            bottom: 15%;
+            right: 5%;
+            animation: orbitDotPulse 3s ease-in-out infinite 1s;
+        }
+
+        .orbit-dot-3 {
+            color: #8B5CF6;
+            background: #8B5CF6;
+            bottom: 15%;
+            left: 5%;
+            animation: orbitDotPulse 3s ease-in-out infinite 2s;
+        }
+
+        @keyframes orbitDotPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.4); opacity: 1; }
+        }
+
+        .hero-globe {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, #1E293B, #334155);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            position: relative;
+            box-shadow: 0 0 60px rgba(99,102,241,0.2), inset 0 0 30px rgba(99,102,241,0.1);
+            animation: globePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes globePulse {
+            0%, 100% { box-shadow: 0 0 60px rgba(99,102,241,0.2), inset 0 0 30px rgba(99,102,241,0.1); }
+            50% { box-shadow: 0 0 80px rgba(99,102,241,0.35), inset 0 0 40px rgba(99,102,241,0.15); }
         }
 
         /* ===== How It Works ===== */
@@ -488,83 +777,53 @@
             background-color: var(--light-surface);
         }
 
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 48px;
-        }
-
-        .tab-btn {
-            padding: 12px 32px;
-            border: none;
-            background: var(--white);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition);
-            color: var(--text-dark);
-        }
-
-        .tab-btn.active {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 32px;
         }
 
         .step {
             text-align: center;
-            padding: 32px;
+            padding: 40px 32px;
             background: var(--white);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
             transition: all var(--transition);
+            position: relative;
+            border: 1px solid rgba(99,102,241,0.08);
         }
 
         .step:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(99,102,241,0.2);
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            color: var(--white);
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+            color: #FFFFFF;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin: 0 auto 20px;
+            box-shadow: 0 6px 20px rgba(99,102,241,0.3);
         }
 
         .step h3 {
-            color: var(--primary);
+            color: var(--text-dark);
             margin-bottom: 12px;
-            font-size: 1.25rem;
-        }
-
-        [data-theme="dark"] .step h3 {
-            color: var(--secondary);
+            font-size: 1.2rem;
         }
 
         .step p {
             color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* ===== Features Section ===== */
@@ -576,39 +835,65 @@
 
         .feature-card {
             background: var(--white);
-            border: 1px solid rgba(138, 154, 91, 0.2);
+            border: 1px solid rgba(99,102,241,0.08);
             border-radius: var(--radius-lg);
-            padding: 32px 24px;
+            padding: 36px 28px;
             text-align: center;
             transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #6366F1, #06B6D4);
+            transform: scaleX(0);
+            transition: transform var(--transition);
         }
 
         .feature-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
+            border-color: transparent;
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
         }
 
         .feature-icon {
             width: 64px;
             height: 64px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: var(--radius-md);
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 1.75rem;
+            transition: transform var(--transition);
+        }
+
+        .feature-icon-1 { background: linear-gradient(135deg, #6366F1, #818CF8); }
+        .feature-icon-2 { background: linear-gradient(135deg, #06B6D4, #22D3EE); }
+        .feature-icon-3 { background: linear-gradient(135deg, #8B5CF6, #A78BFA); }
+        .feature-icon-4 { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+        .feature-icon-5 { background: linear-gradient(135deg, #10B981, #34D399); }
+        .feature-icon-6 { background: linear-gradient(135deg, #F43F5E, #FB7185); }
+        .feature-icon-7 { background: linear-gradient(135deg, #3B82F6, #60A5FA); }
+        .feature-icon-8 { background: linear-gradient(135deg, #EC4899, #F472B6); }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(-5deg);
         }
 
         .feature-card h3 {
-            color: var(--primary);
+            color: var(--text-dark);
             margin-bottom: 8px;
             font-size: 1.1rem;
-        }
-
-        [data-theme="dark"] .feature-card h3 {
-            color: var(--secondary);
         }
 
         .feature-card p {
@@ -616,18 +901,42 @@
             font-size: 0.95rem;
         }
 
-        /* ===== For Guides Section ===== */
-        .for-guides {
-            background: linear-gradient(135deg, var(--primary) 0%, #2d5a4d 100%);
+        /* ===== AI Planning Section ===== */
+        .ai-planning {
+            background: linear-gradient(145deg, #0F172A 0%, #1E293B 40%, #0F172A 100%);
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-planning::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .ai-planning::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .ai-planning .section-title {
             color: #FFFFFF;
         }
 
-        .for-guides .section-title {
-            color: #FFFFFF;
-        }
-
-        .for-guides .section-subtitle {
-            color: rgba(255,255,255,0.85);
+        .ai-planning .section-subtitle {
+            color: rgba(255,255,255,0.7);
         }
 
         .benefits-grid {
@@ -635,6 +944,8 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 60px;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .benefits-list {
@@ -651,8 +962,9 @@
         .benefit-icon {
             width: 48px;
             height: 48px;
-            background: rgba(255,255,255,0.15);
-            border-radius: var(--radius-sm);
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -666,91 +978,102 @@
         }
 
         .benefit-text p {
-            opacity: 0.85;
+            opacity: 0.7;
             font-size: 0.95rem;
         }
 
-        .guides-cta {
+        .ai-cta {
             text-align: center;
-            padding: 40px;
-            background: rgba(255,255,255,0.1);
+            padding: 48px;
+            background: rgba(99,102,241,0.08);
+            border: 1px solid rgba(99,102,241,0.15);
             border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
         }
 
-        .guides-cta h3 {
+        .ai-cta h3 {
             font-size: 1.75rem;
             margin-bottom: 16px;
         }
 
-        .guides-cta p {
-            opacity: 0.9;
+        .ai-cta p {
+            opacity: 0.8;
             margin-bottom: 24px;
         }
 
-        /* ===== For Travelers Section ===== */
-        .for-travelers {
+        /* ===== Explore Section ===== */
+        .explore-section {
             background-color: var(--light-surface);
         }
 
-        .traveler-features {
+        .explore-features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
 
-        .traveler-card {
+        .explore-card {
             background: var(--white);
             border-radius: var(--radius-lg);
             padding: 40px 32px;
             text-align: center;
             box-shadow: var(--shadow-sm);
             transition: all var(--transition);
+            border: 1px solid rgba(99,102,241,0.06);
         }
 
-        .traveler-card:hover {
+        .explore-card:hover {
             box-shadow: var(--shadow-lg);
             transform: translateY(-8px);
+            border-color: rgba(99,102,241,0.15);
         }
 
-        .traveler-card-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .explore-card-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
         }
 
-        .traveler-card h3 {
-            color: var(--primary);
+        .explore-icon-1 { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(99,102,241,0.05)); color: #6366F1; }
+        .explore-icon-2 { background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(6,182,212,0.05)); color: #06B6D4; }
+        .explore-icon-3 { background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(139,92,246,0.05)); color: #8B5CF6; }
+
+        .explore-card h3 {
+            color: var(--text-dark);
             margin-bottom: 12px;
             font-size: 1.25rem;
         }
 
-        [data-theme="dark"] .traveler-card h3 {
-            color: var(--secondary);
-        }
-
-        .traveler-card p {
+        .explore-card p {
             color: var(--text-muted);
             margin-bottom: 20px;
         }
 
-        .traveler-card ul {
+        .explore-card ul {
             list-style: none;
             text-align: left;
         }
 
-        .traveler-card li {
+        .explore-card li {
             padding: 8px 0;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .traveler-card li::before {
+        .explore-card li::before {
             content: '';
             width: 6px;
             height: 6px;
-            background: var(--secondary);
+            background: #6366F1;
             border-radius: 50%;
+            flex-shrink: 0;
         }
 
         /* ===== Trust & Safety ===== */
@@ -767,28 +1090,35 @@
         .trust-card {
             text-align: center;
             padding: 32px 24px;
+            border-radius: var(--radius-lg);
+            transition: all var(--transition);
+        }
+
+        .trust-card:hover {
+            background: var(--light-surface);
+            transform: translateY(-4px);
         }
 
         .trust-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--light-surface);
-            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
+
+        .trust-icon-1 { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(99,102,241,0.05)); }
+        .trust-icon-2 { background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(16,185,129,0.05)); }
+        .trust-icon-3 { background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(6,182,212,0.05)); }
+        .trust-icon-4 { background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(139,92,246,0.05)); }
 
         .trust-card h3 {
-            color: var(--primary);
+            color: var(--text-dark);
             margin-bottom: 8px;
             font-size: 1.1rem;
-        }
-
-        [data-theme="dark"] .trust-card h3 {
-            color: var(--secondary);
         }
 
         .trust-card p {
@@ -796,230 +1126,114 @@
             font-size: 0.95rem;
         }
 
-        /* ===== Destinations ===== */
-        .destinations {
-            background: var(--light-surface);
+        /* ===== Scroll Reveal ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
-            margin-bottom: 48px;
-        }
-
-        .category-card {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            padding: 24px 16px;
-            text-align: center;
-            cursor: pointer;
-            transition: all var(--transition);
-            border: 2px solid transparent;
-        }
-
-        .category-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-4px);
-        }
-
-        .category-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-
-        .category-card span {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 0.9rem;
-        }
-
-        .destinations-showcase {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .destination-card {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            cursor: pointer;
-            transition: all var(--transition);
-        }
-
-        .destination-card:hover {
-            transform: scale(1.02);
-        }
-
-        .destination-card:first-child {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .destination-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 24px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: #FFFFFF;
-        }
-
-        .destination-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 4px;
-        }
-
-        .destination-card p {
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
-
-        /* ===== Testimonials ===== */
-        .testimonials {
-            background: var(--white);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .testimonial-card {
-            background: var(--light-surface);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 16px;
-            left: 24px;
-            font-size: 4rem;
-            color: var(--secondary);
-            opacity: 0.3;
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            color: var(--text-dark);
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--white);
-        }
-
-        .author-info h4 {
-            font-size: 1rem;
-            color: var(--text-dark);
-        }
-
-        .author-info p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .testimonial-rating {
-            color: #f5a623;
-            margin-top: 16px;
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* ===== Mobile Apps Section ===== */
         .mobile-apps {
-            background: linear-gradient(135deg, var(--primary) 0%, #2d5a4d 100%);
+            background: linear-gradient(145deg, #0F172A 0%, #1E293B 40%, #0F172A 100%);
             color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-apps::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
+            border-radius: 50%;
         }
 
         .apps-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .apps-text h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #FFFFFF;
+            letter-spacing: -0.02em;
         }
 
         .apps-text p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 32px;
+            font-size: 1.15rem;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            color: #CBD5E1;
+            line-height: 1.7;
         }
 
-        .app-features {
-            list-style: none;
-            margin-bottom: 32px;
+        .app-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        .app-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 0;
-            font-size: 1rem;
+        .app-highlight {
+            padding: 24px 16px;
+            background: rgba(99,102,241,0.08);
+            border: 1px solid rgba(99,102,241,0.15);
+            border-radius: var(--radius-md);
+            transition: all var(--transition);
         }
 
-        .app-features li::before {
-            content: '';
-            width: 24px;
-            height: 24px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .app-highlight:hover {
+            background: rgba(99,102,241,0.14);
+            border-color: rgba(99,102,241,0.3);
+            transform: translateY(-4px);
+        }
+
+        .app-highlight-icon {
+            margin-bottom: 12px;
+        }
+
+        .app-highlight span {
+            font-size: 0.95rem;
+            color: #CBD5E1;
+            font-weight: 500;
         }
 
         .store-buttons {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .store-btn {
             display: flex;
             align-items: center;
             gap: 12px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 14px 24px;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.25);
+            padding: 14px 28px;
             border-radius: var(--radius-md);
             transition: all var(--transition);
             color: #FFFFFF;
         }
 
         .store-btn:hover {
-            background: rgba(255,255,255,0.25);
+            background: rgba(99,102,241,0.2);
             transform: translateY(-2px);
+            border-color: rgba(99,102,241,0.4);
         }
 
         .store-btn-icon {
@@ -1032,8 +1246,9 @@
 
         .store-btn-text small {
             font-size: 0.75rem;
-            opacity: 0.8;
+            opacity: 0.7;
             display: block;
+            color: #818CF8;
         }
 
         .store-btn-text span {
@@ -1041,49 +1256,16 @@
             font-size: 1rem;
         }
 
-        .apps-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .phone-mockup {
-            width: 280px;
-            height: 560px;
-            background: #1a1a1a;
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
-            border-radius: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .phone-screen img {
-            max-width: 60%;
-            filter: brightness(0) invert(1);
-        }
-
         /* ===== Footer ===== */
         .footer {
-            background: var(--primary);
+            background: #0F172A;
             color: #FFFFFF;
             padding: 60px 0 30px;
         }
 
-        [data-theme="dark"] .footer {
-            background: #1a1a1a;
-        }
-
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
         }
@@ -1095,9 +1277,10 @@
         }
 
         .footer-brand p {
-            opacity: 0.8;
+            opacity: 0.6;
             margin-bottom: 20px;
             font-size: 0.95rem;
+            color: #94A3B8;
         }
 
         .social-links {
@@ -1108,16 +1291,20 @@
         .social-link {
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.15);
             border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all var(--transition);
+            color: #94A3B8;
         }
 
         .social-link:hover {
-            background: var(--secondary);
+            background: #6366F1;
+            border-color: #6366F1;
+            color: #FFFFFF;
         }
 
         .footer-column h4 {
@@ -1135,18 +1322,18 @@
         }
 
         .footer-column a {
-            opacity: 0.8;
-            transition: opacity var(--transition);
+            color: #94A3B8;
+            transition: color var(--transition);
             font-size: 0.95rem;
         }
 
         .footer-column a:hover {
-            opacity: 1;
+            color: #818CF8;
         }
 
         .footer-bottom {
             padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(99,102,241,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1155,7 +1342,7 @@
         }
 
         .footer-bottom p {
-            opacity: 0.7;
+            color: #64748B;
             font-size: 0.9rem;
         }
 
@@ -1165,13 +1352,13 @@
         }
 
         .footer-legal a {
-            opacity: 0.7;
+            color: #64748B;
             font-size: 0.9rem;
-            transition: opacity var(--transition);
+            transition: color var(--transition);
         }
 
         .footer-legal a:hover {
-            opacity: 1;
+            color: #818CF8;
         }
 
         /* ===== Mobile Navigation ===== */
@@ -1220,6 +1407,10 @@
                 justify-content: center;
             }
 
+            .hero-badge {
+                justify-content: center;
+            }
+
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
@@ -1232,30 +1423,8 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .categories-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .destinations-showcase {
+            .app-highlights {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .destination-card:first-child {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
-            .apps-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .apps-visual {
-                order: -1;
-            }
-
-            .store-buttons {
-                justify-content: center;
             }
 
             .footer-grid {
@@ -1284,24 +1453,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .traveler-features {
+            .explore-features {
                 grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .destinations-showcase {
-                grid-template-columns: 1fr;
-            }
-
-            .destination-card:first-child {
-                grid-column: span 1;
             }
 
             .footer-grid {
@@ -1340,9 +1493,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .phone-mockup {
-                width: 220px;
-                height: 440px;
+            .app-highlights {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .store-buttons {
@@ -1364,29 +1516,8 @@
             flex-direction: row-reverse;
         }
 
-        [dir="rtl"] .testimonial-author {
-            flex-direction: row-reverse;
-        }
-
-        [dir="rtl"] .author-info {
+        [dir="rtl"] .explore-card ul {
             text-align: right;
-        }
-
-        /* ===== Animations ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
@@ -1394,22 +1525,17 @@
     <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="/" class="nav-logo" aria-label="JoyJoy Home">
+            <a href="#hero" class="nav-logo" aria-label="JoyJoy Home">
                 <img src="logo.png" alt="JoyJoy Logo">
             </a>
 
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#for-guides">For Guides</a></li>
-                <li><a href="#for-travelers">For Travelers</a></li>
-                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#download">Get the App</a></li>
             </ul>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <span class="theme-icon">&#9790;</span>
-                </button>
                 <button class="lang-btn" id="langBtn" aria-label="Select language">
                     <span id="currentLang">EN</span>
                     <span>&#9662;</span>
@@ -1427,28 +1553,79 @@
         <ul>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#for-guides">For Guides</a></li>
-            <li><a href="#for-travelers">For Travelers</a></li>
-            <li><a href="#destinations">Destinations</a></li>
             <li><a href="#download">Get the App</a></li>
         </ul>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <!-- Mesh gradient blobs -->
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+
+        <!-- Floating particles -->
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Flying routes -->
+        <div class="hero-routes">
+            <svg class="route-lines" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <path d="M-50,450 Q300,100 650,250 T1300,80" fill="none" stroke="rgba(99,102,241,0.12)" stroke-width="1" stroke-dasharray="8 6">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="2s" repeatCount="indefinite"/>
+                </path>
+                <path d="M-50,350 Q400,50 800,200 T1300,120" fill="none" stroke="rgba(6,182,212,0.08)" stroke-width="1" stroke-dasharray="8 6">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="2.5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M-50,550 Q250,200 550,350 T1300,180" fill="none" stroke="rgba(139,92,246,0.06)" stroke-width="1" stroke-dasharray="8 6">
+                    <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="3s" repeatCount="indefinite"/>
+                </path>
+            </svg>
+            <span class="hero-plane">&#9992;</span>
+            <span class="hero-plane">&#9992;</span>
+            <span class="hero-plane">&#9992;</span>
+            <div class="hero-dot" style="top: 28%; left: 18%;"></div>
+            <div class="hero-dot" style="top: 52%; left: 62%;"></div>
+            <div class="hero-dot" style="top: 68%; left: 38%;"></div>
+            <div class="hero-dot" style="top: 22%; left: 78%;"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Discover the World with Local Experts</h1>
-                    <p class="hero-subtitle">Connect with verified local guides for authentic travel experiences. Go beyond tourist traps and discover hidden gems with people who know their city best.</p>
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        AI-Powered Travel Platform
+                    </div>
+                    <h1 class="hero-title">Plan Your Perfect<br>Journey with <span class="gradient-text">AI</span></h1>
+                    <p class="hero-subtitle">Discover trips, activities, and events in every city and country worldwide. Let our AI build your dream itinerary and book everything through trusted local agents.</p>
                     <div class="hero-buttons">
-                        <a href="#for-travelers" class="btn btn-secondary">Find a Guide</a>
-                        <a href="#for-guides" class="btn btn-outline">Become a Guide</a>
+                        <a href="#download" class="btn btn-secondary">Start Planning</a>
+                        <a href="#how-it-works" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="hero-visual">
-                        <span class="hero-icon">&#127759;</span>
+                        <div class="orbit-ring orbit-ring-1">
+                            <div class="orbit-dot orbit-dot-1"></div>
+                        </div>
+                        <div class="orbit-ring orbit-ring-2">
+                            <div class="orbit-dot orbit-dot-2"></div>
+                        </div>
+                        <div class="orbit-ring orbit-ring-3">
+                            <div class="orbit-dot orbit-dot-3"></div>
+                        </div>
+                        <div class="hero-globe">&#127759;</div>
                     </div>
                 </div>
             </div>
@@ -1459,50 +1636,23 @@
     <section class="section how-it-works" id="how-it-works">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Whether you're a traveler seeking authentic experiences or a guide ready to share your expertise, getting started is simple.</p>
+            <p class="section-subtitle">Plan, book, and enjoy your perfect trip in three simple steps powered by AI.</p>
 
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="travelers">For Travelers</button>
-                <button class="tab-btn" data-tab="guides">For Guides</button>
-            </div>
-
-            <div class="tab-content active" id="travelers">
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Browse Local Guides</h3>
-                        <p>Search verified local guides by destination, language, specialty, or ratings. Find the perfect match for your travel style.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Book Your Experience</h3>
-                        <p>Choose from unique tours and experiences. Book instantly with secure payment and get confirmation in seconds.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Travel with Confidence</h3>
-                        <p>Connect with your guide, get real-time updates, and enjoy an authentic local experience. Leave a review to help fellow travelers.</p>
-                    </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <h3>Tell Our AI What You Love</h3>
+                    <p>Share your travel preferences, interests, budget, and dates. Our AI understands what makes your perfect trip and starts crafting your journey.</p>
                 </div>
-            </div>
-
-            <div class="tab-content" id="guides">
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Create Your Profile</h3>
-                        <p>Sign up for free and build your professional profile. Showcase your experience, languages, and specialties.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>List Your Experiences</h3>
-                        <p>Create unique tours and activities. Set your own prices, availability, and let travelers discover your offerings.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Start Earning</h3>
-                        <p>Accept bookings, connect with travelers, and get paid securely. Build your reputation with reviews and grow your business.</p>
-                    </div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Personalized Itinerary</h3>
+                    <p>Receive a complete day-by-day plan with activities, events, restaurants, and hidden gems. Customize anything until it's exactly right.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <h3>Book with Trusted Agents</h3>
+                    <p>Our verified local agents in every destination handle all the bookings. Travel with confidence knowing everything is taken care of.</p>
                 </div>
             </div>
         </div>
@@ -1512,145 +1662,229 @@
     <section class="section features" id="features">
         <div class="container">
             <h2 class="section-title">Why Choose JoyJoy</h2>
-            <p class="section-subtitle">Everything you need for authentic travel experiences, all in one platform.</p>
+            <p class="section-subtitle">Everything you need to plan, book, and enjoy unforgettable journeys worldwide.</p>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#128272;</div>
-                    <h3>Verified Guides</h3>
-                    <p>All guides are vetted and verified for your safety and peace of mind.</p>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-1">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" fill="white" opacity="0.9"/>
+                            <path d="M12 2v4M12 18v4M4 7l4 2M16 15l4 2M20 7l-4 2M8 15l-4 2" stroke="white" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3>AI Trip Planning</h3>
+                    <p>Our intelligent AI builds personalized itineraries based on your preferences, budget, and travel style.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128179;</div>
-                    <h3>Secure Payments</h3>
-                    <p>Protected transactions with escrow until your trip is complete.</p>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-2">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5"/>
+                            <path d="M20 21c0-3.3-3.6-6-8-6s-8 2.7-8 6" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M16.5 6.5l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Trusted Agents</h3>
+                    <p>Verified local agents in every city ensure authentic experiences and seamless bookings.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128172;</div>
-                    <h3>Direct Chat</h3>
-                    <p>Message your guide before, during, and after your experience.</p>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-3">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+                            <path d="M3 12h18" stroke="white" stroke-width="1" opacity="0.6"/>
+                            <path d="M12 3c2 2.5 3.2 5.5 3.2 9s-1.2 6.5-3.2 9c-2-2.5-3.2-5.5-3.2-9s1.2-6.5 3.2-9z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1.2"/>
+                            <path d="M5 6.5c2 1 4.5 1.5 7 1.5s5-0.5 7-1.5M5 17.5c2-1 4.5-1.5 7-1.5s5 0.5 7 1.5" stroke="white" stroke-width="0.8" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <h3>Global Coverage</h3>
+                    <p>Explore trips, activities, and events in every city and country around the world.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#11088;</div>
-                    <h3>Trusted Reviews</h3>
-                    <p>Read verified reviews from real travelers to make informed decisions.</p>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+                            <path d="M8 2v4M16 2v4M3 10h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="8" cy="15" r="1.5" fill="white"/>
+                            <circle cx="12" cy="15" r="1.5" fill="white" opacity="0.6"/>
+                            <circle cx="16" cy="15" r="1.5" fill="white" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Activities & Events</h3>
+                    <p>Discover local events, unique activities, and exclusive experiences wherever you go.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#127760;</div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="5" width="20" height="14" rx="3" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+                            <path d="M2 10h20" stroke="white" stroke-width="1.5"/>
+                            <rect x="5" y="14" width="6" height="2" rx="1" fill="white" opacity="0.5"/>
+                            <path d="M15 12l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Booking</h3>
+                    <p>Protected transactions and transparent pricing for every booking you make.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="18" cy="4" r="3" fill="white" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Updates</h3>
+                    <p>Stay informed with live notifications about your bookings, events, and trip changes.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-7">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 8l6 6M4 14l6-6 2-3M2 5h12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 14l4 8 4-8" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M15 18h6" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Multi-Language</h3>
-                    <p>Find guides who speak your language for seamless communication.</p>
+                    <p>Use the app in your preferred language and connect with agents who speak yours.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128205;</div>
-                    <h3>Discover Spots</h3>
-                    <p>Find trending locations and hidden gems through social media insights.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128197;</div>
-                    <h3>Easy Booking</h3>
-                    <p>Book experiences instantly and manage everything in one place.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128241;</div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon-8">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="6" y="3" width="12" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+                            <circle cx="12" cy="17" r="1" fill="white"/>
+                            <path d="M9 6h6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            <path d="M10 10l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>Mobile First</h3>
-                    <p>Manage everything on the go with our iOS and Android apps.</p>
+                    <p>Plan and manage everything on the go with our iOS and Android apps.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- For Guides Section -->
-    <section class="section for-guides" id="for-guides">
+    <!-- AI-Powered Planning Section -->
+    <section class="section ai-planning" id="ai-planning">
         <div class="container">
-            <h2 class="section-title">Grow Your Guiding Business</h2>
-            <p class="section-subtitle">Join thousands of guides already earning with JoyJoy. Everything you need to build and scale your tourism business.</p>
+            <h2 class="section-title">AI-Powered Journey Builder</h2>
+            <p class="section-subtitle">Let our intelligent AI craft the perfect trip for you, from start to finish.</p>
 
             <div class="benefits-grid">
                 <div class="benefits-list">
                     <div class="benefit-item">
-                        <div class="benefit-icon">&#128176;</div>
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" fill="rgba(99,102,241,0.2)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="3" fill="#818CF8" opacity="0.9"/>
+                                <path d="M12 2v4M12 18v4M4 7l4 2M16 15l4 2M20 7l-4 2M8 15l-4 2" stroke="#818CF8" stroke-width="1" opacity="0.5"/>
+                            </svg>
+                        </div>
                         <div class="benefit-text">
-                            <h4>Zero Upfront Costs</h4>
-                            <p>Start earning without subscription fees. Only pay when you get paid.</p>
+                            <h4>Smart Recommendations</h4>
+                            <p>Our AI learns your preferences and suggests activities, restaurants, and experiences you'll love.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">&#127758;</div>
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" fill="rgba(6,182,212,0.15)" stroke="#22D3EE" stroke-width="1.5"/>
+                                <path d="M3 12h18" stroke="#22D3EE" stroke-width="1" opacity="0.6"/>
+                                <path d="M12 3c2 2.5 3.2 5.5 3.2 9s-1.2 6.5-3.2 9c-2-2.5-3.2-5.5-3.2-9s1.2-6.5 3.2-9z" fill="rgba(6,182,212,0.1)" stroke="#22D3EE" stroke-width="1.2"/>
+                                <path d="M5 6.5c2 1 4.5 1.5 7 1.5s5-0.5 7-1.5M5 17.5c2-1 4.5-1.5 7-1.5s5 0.5 7 1.5" stroke="#22D3EE" stroke-width="0.8" opacity="0.4"/>
+                            </svg>
+                        </div>
                         <div class="benefit-text">
-                            <h4>Global Reach</h4>
-                            <p>Access travelers from around the world looking for authentic experiences.</p>
+                            <h4>Every City, Every Country</h4>
+                            <p>From Paris to Tokyo, New York to Bali — plan trips to any destination on the planet.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">&#128101;</div>
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" fill="rgba(16,185,129,0.12)" stroke="#34D399" stroke-width="1.5"/>
+                                <path d="M12 7v5l3 3" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="1" fill="#34D399"/>
+                            </svg>
+                        </div>
                         <div class="benefit-text">
-                            <h4>Team Management</h4>
-                            <p>Build your agency with team invitations, roles, and revenue sharing.</p>
+                            <h4>Real-time Availability</h4>
+                            <p>Get up-to-date information on events, activities, and bookings as you plan.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">&#128200;</div>
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="5" width="20" height="14" rx="3" fill="rgba(245,158,11,0.12)" stroke="#FBBF24" stroke-width="1.5"/>
+                                <path d="M7 15h4" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M2 10h20" stroke="#FBBF24" stroke-width="1.5"/>
+                                <circle cx="17" cy="14" r="2.5" fill="rgba(245,158,11,0.2)" stroke="#FBBF24" stroke-width="1.2"/>
+                                <path d="M16 14l1 1 2-2" stroke="#FBBF24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div class="benefit-text">
-                            <h4>Analytics Dashboard</h4>
-                            <p>Track performance, bookings, and earnings with detailed insights.</p>
+                            <h4>Budget Optimization</h4>
+                            <p>AI finds the best value options that match your budget without compromising quality.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">&#128274;</div>
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="rgba(139,92,246,0.12)" stroke="#A78BFA" stroke-width="1.5"/>
+                                <path d="M9 11h2M9 14h4" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="16" cy="6" r="3" fill="rgba(139,92,246,0.3)" stroke="#A78BFA" stroke-width="1"/>
+                                <path d="M15 6h2M16 5v2" stroke="#A78BFA" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                         <div class="benefit-text">
-                            <h4>Secure Payments</h4>
-                            <p>Get paid reliably via Stripe with automatic payouts to your bank.</p>
+                            <h4>24/7 AI Assistant</h4>
+                            <p>Get instant help anytime — modify your itinerary, find alternatives, or ask for tips.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="guides-cta">
-                    <h3>Ready to Start Earning?</h3>
-                    <p>Join 1,000+ guides already building their business on JoyJoy. Create your profile in minutes and start receiving bookings.</p>
-                    <a href="#download" class="btn btn-secondary">Become a Guide</a>
-                    <div class="app-highlight">
-                        &#128241; Download the <strong>JoyJoy Guide</strong> app for guides
-                    </div>
+                <div class="ai-cta">
+                    <h3>Ready to Plan Your Journey?</h3>
+                    <p>Join thousands of travelers who use JoyJoy AI to build their perfect trips. Download the app and start planning in minutes.</p>
+                    <a href="#download" class="btn btn-secondary">Get Started Free</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- For Travelers Section -->
-    <section class="section for-travelers" id="for-travelers">
+    <!-- Explore Section -->
+    <section class="section explore-section" id="explore">
         <div class="container">
-            <h2 class="section-title">Discover Authentic Experiences</h2>
-            <p class="section-subtitle">Travel like a local with verified guides who share your interests and passion for exploration.</p>
+            <h2 class="section-title">Explore Your Way</h2>
+            <p class="section-subtitle">From weekend getaways to month-long adventures, JoyJoy has everything you need.</p>
 
-            <div class="traveler-features">
-                <div class="traveler-card">
-                    <div class="traveler-card-icon">&#128270;</div>
-                    <h3>Find Your Perfect Guide</h3>
-                    <p>Search by destination, language, price, and interests to find guides that match your travel style.</p>
+            <div class="explore-features">
+                <div class="explore-card reveal">
+                    <div class="explore-card-icon explore-icon-1"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor"/></svg></div>
+                    <h3>Trips & Tours</h3>
+                    <p>Complete travel packages curated by AI and managed by trusted local agents.</p>
                     <ul>
-                        <li>Filter by ratings and reviews</li>
-                        <li>Browse detailed profiles</li>
-                        <li>Preview trip itineraries</li>
+                        <li>Multi-day itineraries</li>
+                        <li>City tours and day trips</li>
+                        <li>Customizable packages</li>
                     </ul>
                 </div>
-                <div class="traveler-card">
-                    <div class="traveler-card-icon">&#128179;</div>
-                    <h3>Book with Confidence</h3>
-                    <p>Secure payments, clear cancellation policies, and instant booking confirmation.</p>
+                <div class="explore-card reveal">
+                    <div class="explore-card-icon explore-icon-2"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M13.5 5.5C14.6 5.5 15.5 4.6 15.5 3.5S14.6 1.5 13.5 1.5 11.5 2.4 11.5 3.5s.9 2 2 2z" fill="currentColor"/><path d="M17.5 10.78l-2.5-1.28-1.5-2.5c-.35-.58-.97-.93-1.64-.93H10.5c-.67 0-1.29.35-1.64.93L7.5 9.5 5 10.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M14 12.5v4l3.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12.5v4l-3.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 22h13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/></svg></div>
+                    <h3>Activities & Experiences</h3>
+                    <p>Unique things to do in every destination, from adventure sports to cooking classes.</p>
                     <ul>
-                        <li>Protected payments via Stripe</li>
-                        <li>Transparent pricing</li>
-                        <li>Flexible cancellation</li>
+                        <li>Outdoor adventures</li>
+                        <li>Cultural workshops</li>
+                        <li>Food and wine tasting</li>
                     </ul>
                 </div>
-                <div class="traveler-card">
-                    <div class="traveler-card-icon">&#127919;</div>
-                    <h3>Experience the Local Way</h3>
-                    <p>Go beyond tourist traps with insider knowledge and personalized experiences.</p>
+                <div class="explore-card reveal">
+                    <div class="explore-card-icon explore-icon-3"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="14" r="1.2" fill="currentColor"/><circle cx="12" cy="14" r="1.2" fill="currentColor"/><circle cx="16" cy="14" r="1.2" fill="currentColor"/><path d="M10 17.5l1.3-1 1.3 1 1.3-1 1.3 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <h3>Events & Festivals</h3>
+                    <p>Never miss local events, festivals, concerts, and seasonal celebrations worldwide.</p>
                     <ul>
-                        <li>Hidden gems and local spots</li>
-                        <li>Real-time communication</li>
-                        <li>Share reviews to help others</li>
+                        <li>Music and art festivals</li>
+                        <li>Local celebrations</li>
+                        <li>Seasonal events</li>
                     </ul>
                 </div>
             </div>
@@ -1665,130 +1899,45 @@
 
             <div class="trust-grid">
                 <div class="trust-card">
-                    <div class="trust-icon">&#128100;</div>
-                    <h3>Verified Guides</h3>
-                    <p>All guides go through our verification process including ID checks and profile review.</p>
+                    <div class="trust-icon trust-icon-1">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z" fill="rgba(99,102,241,0.2)" stroke="#6366F1" stroke-width="1.5"/>
+                            <path d="M20 21c0-3.3-3.6-6-8-6s-8 2.7-8 6" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M16 7l2 2 3-3" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Verified Agents</h3>
+                    <p>All agents go through our strict verification process including ID checks and background review.</p>
                 </div>
                 <div class="trust-card">
-                    <div class="trust-icon">&#128179;</div>
+                    <div class="trust-icon trust-icon-2">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+                            <path d="M9 12l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>Payment Protection</h3>
-                    <p>Funds are held securely in escrow and only released after trip completion.</p>
+                    <p>Funds are held securely and only released after your experience is confirmed.</p>
                 </div>
                 <div class="trust-card">
-                    <div class="trust-icon">&#128274;</div>
+                    <div class="trust-icon trust-icon-3">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="11" width="18" height="11" rx="2" fill="rgba(6,182,212,0.15)" stroke="#06B6D4" stroke-width="1.5"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="12" cy="16" r="1.5" fill="#06B6D4"/>
+                        </svg>
+                    </div>
                     <h3>Data Security</h3>
-                    <p>Industry-standard encryption and GDPR-compliant data protection.</p>
+                    <p>Industry-standard encryption and GDPR-compliant data protection for all users.</p>
                 </div>
                 <div class="trust-card">
-                    <div class="trust-icon">&#128222;</div>
+                    <div class="trust-icon trust-icon-4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07A19.5 19.5 0 0 1 5.16 13 19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.35a2 2 0 0 1-.45 2.11L8.09 9.41a16 16 0 0 0 6.5 6.5l1.23-1.22a2 2 0 0 1 2.11-.45c.75.32 1.54.55 2.35.68A2 2 0 0 1 22 16.92z" fill="rgba(139,92,246,0.15)" stroke="#8B5CF6" stroke-width="1.5"/>
+                        </svg>
+                    </div>
                     <h3>24/7 Support</h3>
-                    <p>Our support team is always here to help with any issues or concerns.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Destinations Section -->
-    <section class="section destinations" id="destinations">
-        <div class="container">
-            <h2 class="section-title">Explore Categories</h2>
-            <p class="section-subtitle">From cultural tours to adventure activities, find experiences that match your interests.</p>
-
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">&#127961;</div>
-                    <span>Cultural</span>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">&#9968;</div>
-                    <span>Adventure</span>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">&#127860;</div>
-                    <span>Food & Wine</span>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">&#127795;</div>
-                    <span>Nature</span>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">&#128247;</div>
-                    <span>Photography</span>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">&#127939;</div>
-                    <span>Active</span>
-                </div>
-            </div>
-
-            <div class="destinations-showcase">
-                <div class="destination-card">
-                    <div class="destination-overlay">
-                        <h3>Morocco</h3>
-                        <p>120+ experiences</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-overlay">
-                        <h3>Egypt</h3>
-                        <p>85+ experiences</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-overlay">
-                        <h3>Tunisia</h3>
-                        <p>60+ experiences</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-overlay">
-                        <h3>Jordan</h3>
-                        <p>45+ experiences</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">What People Say</h2>
-            <p class="section-subtitle">Hear from travelers and guides who use JoyJoy.</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">JoyJoy completely changed how I travel. My guide in Marrakech took me to places I never would have found on my own. The authentic food spots alone were worth it!</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sarah M.</h4>
-                            <p>Traveler from USA</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">As a local guide, JoyJoy has helped me build a sustainable business. The platform is easy to use, payments are reliable, and I love connecting with travelers from all over.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AK</div>
-                        <div class="author-info">
-                            <h4>Ahmed K.</h4>
-                            <p>Guide in Cairo</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The verification process gave me confidence to book. Our guide was professional, knowledgeable, and made our family trip to Tunisia unforgettable. Highly recommend!</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JL</div>
-                        <div class="author-info">
-                            <h4>Jean L.</h4>
-                            <p>Traveler from France</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>Our support team is always here to help with any issues or concerns during your journey.</p>
                 </div>
             </div>
         </div>
@@ -1800,39 +1949,83 @@
             <div class="apps-content">
                 <div class="apps-text">
                     <h2>Get the JoyJoy App</h2>
-                    <p>Download our app for iOS or Android and start exploring. Book experiences, chat with guides, and manage your trips all from your phone.</p>
+                    <p>Our app for iOS and Android is coming very soon! Let AI plan your next adventure. Discover trips, activities, and events worldwide — all at your fingertips.</p>
 
-                    <ul class="app-features">
-                        <li>Browse and book experiences instantly</li>
-                        <li>Chat directly with your guides</li>
-                        <li>Offline access to your trip details</li>
-                        <li>Real-time notifications</li>
-                        <li>Save favorites for future trips</li>
-                    </ul>
+                    <div class="app-highlights">
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" fill="rgba(99,102,241,0.2)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="12" r="3" fill="#818CF8"/>
+                                </svg>
+                            </div>
+                            <span>AI Journey Planning</span>
+                        </div>
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="4" width="18" height="18" rx="3" fill="rgba(6,182,212,0.15)" stroke="#22D3EE" stroke-width="1.5"/>
+                                    <path d="M8 2v4M16 2v4M3 10h18" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M9 14l2 2 4-4" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Instant Booking</span>
+                        </div>
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z" fill="rgba(16,185,129,0.2)" stroke="#34D399" stroke-width="1.5"/>
+                                    <path d="M20 21c0-3.3-3.6-6-8-6s-8 2.7-8 6" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M16.5 6.5l2 2 3-3" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Trusted Agents</span>
+                        </div>
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="rgba(245,158,11,0.12)" stroke="#FBBF24" stroke-width="1.5"/>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="18" cy="4" r="3" fill="#FBBF24" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <span>Real-time Updates</span>
+                        </div>
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="9" fill="rgba(139,92,246,0.12)" stroke="#A78BFA" stroke-width="1.5"/>
+                                    <path d="M3 12h18" stroke="#A78BFA" stroke-width="1" opacity="0.6"/>
+                                    <path d="M12 3c2 2.5 3.2 5.5 3.2 9s-1.2 6.5-3.2 9c-2-2.5-3.2-5.5-3.2-9s1.2-6.5 3.2-9z" fill="rgba(139,92,246,0.1)" stroke="#A78BFA" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                            <span>Global Coverage</span>
+                        </div>
+                        <div class="app-highlight">
+                            <div class="app-highlight-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="rgba(244,63,94,0.15)" stroke="#FB7185" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                            <span>Offline Itinerary</span>
+                        </div>
+                    </div>
 
                     <div class="store-buttons">
-                        <a href="#" class="store-btn" aria-label="Download on App Store">
+                        <a href="#" class="store-btn" style="opacity: 0.7; pointer-events: none;" aria-label="Coming soon on App Store">
                             <span class="store-btn-icon">&#63743;</span>
                             <div class="store-btn-text">
-                                <small>Download on the</small>
+                                <small>Coming Very Soon</small>
                                 <span>App Store</span>
                             </div>
                         </a>
-                        <a href="#" class="store-btn" aria-label="Get it on Google Play">
+                        <a href="#" class="store-btn" style="opacity: 0.7; pointer-events: none;" aria-label="Coming soon on Google Play">
                             <span class="store-btn-icon">&#9654;</span>
                             <div class="store-btn-text">
-                                <small>Get it on</small>
+                                <small>Coming Very Soon</small>
                                 <span>Google Play</span>
                             </div>
                         </a>
-                    </div>
-                </div>
-
-                <div class="apps-visual">
-                    <div class="phone-mockup">
-                        <div class="phone-screen">
-                            <img src="logo.png" alt="JoyJoy App">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1858,7 +2051,7 @@
                 <div class="lang-option" data-lang="ar" data-url="ar/index.html">
                     <span class="lang-flag">&#127462;&#127466;</span>
                     <span class="lang-name">Arabic</span>
-                    <span class="lang-native">العربية</span>
+                    <span class="lang-native">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</span>
                 </div>
             </div>
             <button class="lang-popup-close" id="langPopupClose">Confirm</button>
@@ -1871,7 +2064,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="logo.png" alt="JoyJoy">
-                    <p>Connecting travelers with local experts for authentic experiences. Discover the world through the eyes of those who know it best.</p>
+                    <p>Plan your perfect journey with AI. Discover trips, activities, and events worldwide with trusted local agents.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">f</a>
                         <a href="#" class="social-link" aria-label="Instagram">&#128247;</a>
@@ -1881,22 +2074,12 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>For Travelers</h4>
+                    <h4>Explore</h4>
                     <ul>
                         <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#trust">Trust & Safety</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>For Guides</h4>
-                    <ul>
-                        <li><a href="#for-guides">Become a Guide</a></li>
-                        <li><a href="#">Guide Resources</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                        <li><a href="#">Community</a></li>
+                        <li><a href="#download">Get the App</a></li>
                     </ul>
                 </div>
 
@@ -1933,27 +2116,8 @@
     </footer>
 
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('.theme-icon');
-
-        // Check for saved theme preference or default to light
-        const savedTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            themeIcon.innerHTML = theme === 'dark' ? '&#9788;' : '&#9790;';
-        }
+        // Dark mode is the only theme
+        document.documentElement.setAttribute('data-theme', 'dark');
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1964,27 +2128,10 @@
             mobileMenuBtn.innerHTML = mobileNav.classList.contains('active') ? '&#10005;' : '&#9776;';
         });
 
-        // Close mobile menu when clicking a link
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
                 mobileMenuBtn.innerHTML = '&#9776;';
-            });
-        });
-
-        // Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.remove('active'));
-
-                btn.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
             });
         });
 
@@ -1996,14 +2143,12 @@
         const currentLangSpan = document.getElementById('currentLang');
         let selectedLang = localStorage.getItem('preferredLanguage') || 'en';
 
-        // Update current language display
         function updateLangDisplay() {
             const langNames = { en: 'EN', fr: 'FR', ar: 'AR' };
             currentLangSpan.textContent = langNames[selectedLang] || 'EN';
         }
         updateLangDisplay();
 
-        // Show popup on first visit or when clicking language button
         const hasVisited = localStorage.getItem('hasVisited');
         if (!hasVisited) {
             setTimeout(() => {
@@ -2013,7 +2158,6 @@
 
         langBtn.addEventListener('click', () => {
             langPopup.classList.add('active');
-            // Highlight current selection
             langOptions.forEach(opt => {
                 opt.classList.toggle('selected', opt.dataset.lang === selectedLang);
             });
@@ -2033,14 +2177,12 @@
             langPopup.classList.remove('active');
             updateLangDisplay();
 
-            // Redirect to selected language
             const selectedOption = document.querySelector(`.lang-option[data-lang="${selectedLang}"]`);
             if (selectedOption && selectedLang !== 'en') {
                 window.location.href = selectedOption.dataset.url;
             }
         });
 
-        // Close popup when clicking outside
         langPopup.addEventListener('click', (e) => {
             if (e.target === langPopup) {
                 langPopup.classList.remove('active');
@@ -2072,6 +2214,21 @@
                 nav.style.boxShadow = 'var(--shadow-sm)';
             }
         });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
     </script>
 </body>
 </html>
